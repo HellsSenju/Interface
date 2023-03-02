@@ -88,10 +88,10 @@
             <Rectangle Grid.Row="2" Grid.Column="3" Margin="5" MinHeight="300">
                 <Rectangle.Fill>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black"/>
-                        <GradientStop Color="#FFC1B100" Offset="0.500"/>
-                        <GradientStop Color="#FFC80000" Offset="0.800"/>
-                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="#023145"/>
+                        <GradientStop Color="#146B91" Offset="0.500"/>
+                        <GradientStop Color="#69BFE3" Offset="0.800"/>
+                        <GradientStop Color="#A4D0E3" Offset="1"/>
                     </LinearGradientBrush>
                 </Rectangle.Fill>
             </Rectangle>
