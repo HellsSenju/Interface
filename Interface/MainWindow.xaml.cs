@@ -32,7 +32,7 @@ namespace Interface
 
         private void StopVideoBtn_Click(object sender, RoutedEventArgs e)
         {
-            videoOnePeace.Stop();
+            videoOnePeace.Pause();
         }
 
         private void whoIsLuffy_Click(object sender, RoutedEventArgs e)
