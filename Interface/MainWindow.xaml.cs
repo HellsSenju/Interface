@@ -24,5 +24,25 @@ namespace Interface
         {
             InitializeComponent();
         }
+
+        private void startVideoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            videoOnePeace.Play();
+        }
+
+        private void StopVideoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            videoOnePeace.Stop();
+        }
+
+        private void whoIsLuffy_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Монки Д. Луффи — главный герой аниме и манги One Piece. Основатель капитан Пиратов Соломенной Шляпы");
+        }
+
+        private void funnyThing_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Неважно, возможно это или нет. Я это сделаю, потому что хочу сделать. - Монки Д Луффи");
+        }
     }
 }
