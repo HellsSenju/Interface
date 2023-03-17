@@ -17,7 +17,7 @@
                                         To="#A4D0E3"              
                                         Duration="0:0:2"
                                         AutoReverse="True"
-                                        RepeatBehavior="Forever"/>
+                                        RepeatBehavior="Forever"/>  
                         <ColorAnimation Storyboard.TargetName="startVideoBtn" Storyboard.TargetProperty="Foreground.Color" 
                                         From="#A4D0E3"
                                         To="#023145"              
@@ -46,6 +46,29 @@
         <Style TargetType="MediaElement">
             <Setter Property="Margin"  Value="5" />
         </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="FontWeight" Value="DemiBold" />
+            <Setter Property="FontSize" Value="22" />
+        </Style>
+
+        <Style TargetType="Border">
+            <Setter Property="BorderBrush" Value="#023145" />
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="Background" Value="#146B91" />
+        </Style>
+
+        <LinearGradientBrush x:Key="GradientStyle" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#023145"/>
+            <GradientStop Color="#146B91" Offset="0.500"/>
+            <GradientStop Color="#69BFE3" Offset="0.800"/>
+            <GradientStop Color="#A4D0E3" Offset="1"/>
+        </LinearGradientBrush>
     </Window.Resources>
 
     <Grid>
@@ -60,16 +83,11 @@
             <ColumnDefinition Width="180*"/>
             <ColumnDefinition Width="180*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="titleLabel" Content="OnePeace" 
-               Grid.Column="0" 
-               Margin="10" 
-               Grid.ColumnSpan="4"
-               Background="#146B91"
-               Foreground="White"
-               HorizontalContentAlignment="Center" 
-               VerticalContentAlignment="Center" 
-               FontWeight="DemiBold" 
-               FontSize="22"/>
+
+        <Border Name="MyBorder" Grid.Column="0" Grid.ColumnSpan="4" >
+            <Label x:Name="titleLabel" Content="OnePeace" />
+        </Border>
+            
         <Button x:Name="startVideoBtn" 
             Content="Старт видео"  
             Grid.RowSpan="1" 
@@ -117,15 +135,7 @@
             Grid.Row="2"
             Grid.RowSpan="1" />
         <StackPanel Grid.Row="2" Grid.Column="3" Grid.RowSpan="1" Margin="5" Grid.ColumnSpan="1">
-            <Rectangle Grid.Row="2" Grid.Column="3" Margin="5" MinHeight="160">
-                <Rectangle.Fill>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#023145"/>
-                        <GradientStop Color="#146B91" Offset="0.500"/>
-                        <GradientStop Color="#69BFE3" Offset="0.800"/>
-                        <GradientStop Color="#A4D0E3" Offset="1"/>
-                    </LinearGradientBrush>
-                </Rectangle.Fill>
+            <Rectangle Fill="{StaticResource GradientStyle}" Grid.Row="2" Grid.Column="3" MinHeight="170">
             </Rectangle>
         </StackPanel>
 
